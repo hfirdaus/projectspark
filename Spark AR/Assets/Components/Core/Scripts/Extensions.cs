@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Extensions : MonoBehaviour
+public static partial class Extensions
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public static Color WithAlpha(this Color color, float alpha)
+	{
+		return new Color(color.r, color.g, color.b, alpha);
+	}
 }

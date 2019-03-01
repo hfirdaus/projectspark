@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147485199789080331}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.59, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -104,15 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5ebdef585e14a418aa8e13aa59a51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data:
-    Name: 
-    PlanetIndex: 0
-    Facts: []
-  TooltipSprite: {fileID: 0}
-  star: {fileID: 0}
-  diameter: 0
-  tilt: 0
-  orbit_radius: 0
-  orbit_per: 0
-  orbit_incl: 0
-  rotation_per: 0
+  diameter: 120536
+  tilt: 26.7
+  orbit_radius: 1433.5
+  orbit_per: 10747
+  orbit_incl: 2.5
+  rotation_per: -10.7

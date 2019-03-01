@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1b24ead204bed7242bceff89e5859123, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.13883659, g: 0.1770933, b: 0.21488056, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -162,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 838343291025884041, guid: e62b71e90b68c5b408cd5979d8013e9e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 838343291025884041, guid: e62b71e90b68c5b408cd5979d8013e9e,
         type: 3}
@@ -237,7 +237,7 @@ PrefabInstance:
     - target: {fileID: 8996730295784439272, guid: d1664a310e5cec047bdec5028a17cba4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8996730295784439272, guid: d1664a310e5cec047bdec5028a17cba4,
         type: 3}
@@ -312,7 +312,7 @@ PrefabInstance:
     - target: {fileID: 4163670013438482673, guid: f746225415dbb15419fded207f53dfa2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4163670013438482673, guid: f746225415dbb15419fded207f53dfa2,
         type: 3}
@@ -380,8 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bfa3ffa22ee8c45ad642057f1739a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlanetPrefabs:
-  - {fileID: 7954215264053300276, guid: 456ea625f9978bc449244ee1f565355f, type: 3}
 --- !u!1 &745479137
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 745479138}
+  - component: {fileID: 745479139}
   m_Layer: 0
   m_Name: SolarSystem
   m_TagString: Untagged
@@ -409,18 +408,34 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1217313896}
-  - {fileID: 1656530645}
-  - {fileID: 495672350}
-  - {fileID: 473438847}
-  - {fileID: 1447783511}
-  - {fileID: 1132153813}
   - {fileID: 523049095}
-  - {fileID: 998200829}
+  - {fileID: 473438847}
   - {fileID: 1299766291}
+  - {fileID: 1217313896}
+  - {fileID: 495672350}
+  - {fileID: 1656530645}
+  - {fileID: 1132153813}
+  - {fileID: 998200829}
+  - {fileID: 1447783511}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &745479139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745479137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222ef820104dcea4eb68b8693b2501b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrbitScale: 3
+  RadiusScale: 1
+  TimeScale: 0.0001
+  GhostMaterial: {fileID: 2100000, guid: 34b12f68c4ce82d4cbda7bdb73f452ea, type: 2}
 --- !u!1 &802999469
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +727,7 @@ PrefabInstance:
     - target: {fileID: 1147485199789080330, guid: 02414ff92c1b03845ac48da9c69797a2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1147485199789080330, guid: 02414ff92c1b03845ac48da9c69797a2,
         type: 3}
@@ -787,7 +802,7 @@ PrefabInstance:
     - target: {fileID: 4393266591027263670, guid: a5888175b8e4264439528f91111827a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4393266591027263670, guid: a5888175b8e4264439528f91111827a9,
         type: 3}
@@ -802,6 +817,16 @@ PrefabInstance:
     - target: {fileID: 4393266591027263670, guid: a5888175b8e4264439528f91111827a9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652798198230568210, guid: a5888175b8e4264439528f91111827a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038079391890976646, guid: a5888175b8e4264439528f91111827a9,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -862,7 +887,7 @@ PrefabInstance:
     - target: {fileID: 5606110799483065037, guid: fd935416bb06dfd4d84be86fdc395a19,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5606110799483065037, guid: fd935416bb06dfd4d84be86fdc395a19,
         type: 3}
@@ -937,7 +962,7 @@ PrefabInstance:
     - target: {fileID: 1391961497858291912, guid: deb07db74df04654981a0c3a372ed790,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1391961497858291912, guid: deb07db74df04654981a0c3a372ed790,
         type: 3}
@@ -998,7 +1023,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1094,7 +1119,7 @@ PrefabInstance:
     - target: {fileID: 8001109732759877778, guid: 963fa59bdbdb45843b9d81e0a9ca4e9e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8001109732759877778, guid: 963fa59bdbdb45843b9d81e0a9ca4e9e,
         type: 3}
