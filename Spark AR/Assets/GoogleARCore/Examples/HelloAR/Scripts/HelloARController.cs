@@ -79,8 +79,6 @@ namespace GoogleARCore.Examples.HelloAR
                 return;
             }
 
-			Debug.Log("Here");
-
             // Raycast against the location the player touched to search for planes.
             TrackableHit hit;
             TrackableHitFlags raycastFilter = TrackableHitFlags.PlaneWithinPolygon |

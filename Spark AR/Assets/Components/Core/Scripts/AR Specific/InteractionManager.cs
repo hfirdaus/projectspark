@@ -7,5 +7,7 @@ using UnityEngine;
 /// </summary>
 public class InteractionManager : Singleton<InteractionManager>
 {
-
+	void Awake()
+	{
+	}
 }
