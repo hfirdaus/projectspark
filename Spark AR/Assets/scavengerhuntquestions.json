@@ -58,14 +58,12 @@
         "Wind",
         "Water",
         "Lightning",
-        "A collision with an asteroid",
-        "meteorite",
-        "or comet"
+        "A collision with an asteroid, meteorite, or comet"
       ],
       "celestial_body": "The Moon",
       "location": "West Wall of Gallery",
       "correct_answer": "A collision with an asteroid, meteorite, or comet",
-      "reason": "The collisions were so powerful and strong that they sent shockwaves through the Moon’s surface. These waves created craters with ripples, like in water!"
+      "reason": "The collisions were so powerful and strong that they sent shockwaves through the Moonâ€™s surface. These waves created craters with ripples, like in water!"
     },
     {
       "question": "NASA's Curiosity Rover on Mars had to find the sun when it landed to communicate with Earth. Which direction is the picture it took, which you can find in the gallery, facing?",
@@ -78,7 +76,7 @@
         "South"
       ],
       "correct_answer": "Away from the sun",
-      "reason": "You can tell it’s facing away from the sun because Curiosity’s self-portrait is of its shadow!"
+      "reason": "You can tell itâ€™s facing away from the sun because Curiosityâ€™s self-portrait is of its shadow!"
     },
     {
       "question": "The Great Red Spot on Jupiter is a storm that has been raging for 80 years. What types of clouds create thunderstorms in Earth's atmosphere?",
@@ -101,7 +99,7 @@
         "[Sedimentary",
         "Igneous and Metamorphic",
         "Crystalline",
-        "Fossils]"
+        "Fossils"
       ],
       "correct_answer": "Igneous and Metamorphic",
       "reason": "Magnetite is the mineral found in rocks that makes them magnetic, and it is commonly found in igneous and metamorphic rocks."
@@ -114,10 +112,10 @@
         "[100 meters",
         "700 meters",
         "200 meters",
-        "650 meters]"
+        "650 meters"
       ],
       "correct_answer": "650 meters",
-      "reason": "It’s amazing to think that where we are now used to be giant glaciers and ice more than half a kilometer deep! What kind of world do you think that would look like?"
+      "reason": "Itâ€™s amazing to think that where we are now used to be giant glaciers and ice more than half a kilometer deep! What kind of world do you think that would look like?"
     }
   ]
 }
