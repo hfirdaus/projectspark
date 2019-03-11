@@ -1,0 +1,123 @@
+{
+  "clue": [
+    {
+      "question": "What do we call it when solar winds meet the Earth's magnetic field to produce an amazing light show?",
+      "celestial_body": "Sun",
+      "location": "South Wall of Gallery",
+      "answers": [
+        "Curtains of Light",
+        "Aurora Borealis",
+        "Equatorial Lights",
+        "Boreal Light Show"
+      ],
+      "correct_answer": "Aurora Borealis",
+      "reason": "Auroras are named after the Roman goddess Aurora who heralded the coming of the sun from east to west, and Borealis refers to the north. This is why the Aurora Borealis is also called the Northern Lights."
+    },
+    {
+      "question": "Even though Mercury is barren, what is one way that craters can be distorted over time?",
+      "celestial_body": "Mercury",
+      "location": "West Wall of Gallery",
+      "answers": [
+        "Wind",
+        "Rain",
+        "Formation of new craters",
+        "Movement of tectonic plates"
+      ],
+      "correct_answer": "Formation of new craters",
+      "Reason": "Mercury has so many craters that when new craters form, they can distort the craters nearby or overlapping with them."
+    },
+    {
+      "question": "Which planet's dense atmosphere might be hiding volcanos?",
+      "celestial_body": "Venus",
+      "location": "Across From West Wall of Gallery",
+      "answers": [
+        "Neptune",
+        "Mercury",
+        "Mars",
+        "Venus"
+      ],
+      "correct_answer": "Venus",
+      "reason": "Venus has the most volcanoes of any planet in our solar system! Under any part of the atmosphere anywhere on Venus, volcanoes can be found."
+    },
+    {
+      "question": "But why is the sky blue?",
+      "celestial_body": "Earth",
+      "location": "South Wall of Gallery",
+      "answers": [
+        "Nitrogen scatters blue light",
+        "Brillouin scattering",
+        "Raman scattering",
+        "Compton scattering"
+      ],
+      "correct_answer": "Nitrogen scatters blue light",
+      "reason": "This phenomena is called Rayleigh scattering, because blue light scatters more it can be seen from many angles here on Earth so most of the time the sky looks blue. During sunset, the angle of the sun to our eyes is more direct, so the sky can look red or orange because that red light is making its way to us."
+    },
+    {
+      "question": "What created rippled craters on the Moon?",
+      "answers": [
+        "Wind",
+        "Water",
+        "Lightning",
+        "A collision with an asteroid",
+        "meteorite",
+        "or comet"
+      ],
+      "celestial_body": "The Moon",
+      "location": "West Wall of Gallery",
+      "correct_answer": "A collision with an asteroid, meteorite, or comet",
+      "reason": "The collisions were so powerful and strong that they sent shockwaves through the Moon’s surface. These waves created craters with ripples, like in water!"
+    },
+    {
+      "question": "NASA's Curiosity Rover on Mars had to find the sun when it landed to communicate with Earth. Which direction is the picture it took, which you can find in the gallery, facing?",
+      "celestial_body": "Mars",
+      "location": "South-east Corner of Gallery",
+      "answers": [
+        "Toward the sun",
+        "Away from the sun",
+        "North",
+        "South"
+      ],
+      "correct_answer": "Away from the sun",
+      "reason": "You can tell it’s facing away from the sun because Curiosity’s self-portrait is of its shadow!"
+    },
+    {
+      "question": "The Great Red Spot on Jupiter is a storm that has been raging for 80 years. What types of clouds create thunderstorms in Earth's atmosphere?",
+      "celestial_body": "Jupiter",
+      "location": "West Wall of the Gallery",
+      "answers": [
+        "Cirrus",
+        "Stratus",
+        "Cumulonimbus",
+        "Altocumulus"
+      ],
+      "correct_answer": "Cumulonimbus",
+      "reason": "Since cumulonimbus clouds are so dense and tall, water vapour is formed inside them, and lightning can also form."
+    },
+    {
+      "question": "Saturn's magnetosphere is the second-strongest in the solar system, and creates visible aurorae of light around Saturn's poles. What types of earth rock are magnetic and might interact with Saturn's magnetic field if you brought them there?",
+      "celestial_body": "Saturn",
+      "location": "North End of the East Wall of the Gallery",
+      "answers": [
+        "[Sedimentary",
+        "Igneous and Metamorphic",
+        "Crystalline",
+        "Fossils]"
+      ],
+      "correct_answer": "Igneous and Metamorphic",
+      "reason": "Magnetite is the mineral found in rocks that makes them magnetic, and it is commonly found in igneous and metamorphic rocks."
+    },
+    {
+      "question": "Neptune and Uranus are called \"ice giants\" because they have mantles of water, ammonia and methane in a dense fluid instead of gas - even though that wouldn't seem much like ice to us! Here in Calgary, we used to be covered in a glacier, and then a lake -- what was the depth of the \"icy ocean\" over us?",
+      "celestial_body": "Neptune and Uranus",
+      "location": "East Wall of the Gallery",
+      "answers": [
+        "[100 meters",
+        "700 meters",
+        "200 meters",
+        "650 meters]"
+      ],
+      "correct_answer": "650 meters",
+      "reason": "It’s amazing to think that where we are now used to be giant glaciers and ice more than half a kilometer deep! What kind of world do you think that would look like?"
+    }
+  ]
+}
