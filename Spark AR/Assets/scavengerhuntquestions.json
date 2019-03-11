@@ -27,7 +27,7 @@
       "Reason": "Mercury has so many craters that when new craters form, they can distort the craters nearby or overlapping with them."
     },
     {
-      "question": "Which planet's dense atmosphere might be hiding volcanos?",
+      "question": "Which planet's dense atmosphere might be hiding volcanoes?",
       "celestial_body": "Venus",
       "location": "Across From West Wall of Gallery",
       "answers": [
@@ -96,7 +96,7 @@
       "celestial_body": "Saturn",
       "location": "North End of the East Wall of the Gallery",
       "answers": [
-        "[Sedimentary",
+        "Sedimentary",
         "Igneous and Metamorphic",
         "Crystalline",
         "Fossils"
@@ -109,7 +109,7 @@
       "celestial_body": "Neptune and Uranus",
       "location": "East Wall of the Gallery",
       "answers": [
-        "[100 meters",
+        "100 meters",
         "700 meters",
         "200 meters",
         "650 meters"
