@@ -10,7 +10,7 @@
         "Equatorial Lights",
         "Boreal Light Show"
       ],
-      "correct_index": "1",
+      "correct_index": 1,
       "responses": [
         "This is false",
         "Auroras are named after the Roman goddess Aurora who heralded the coming of the sun from east to west and Borealis refers to the north. This is why the Aurora Borealis is also called the Northern Lights.",
@@ -28,7 +28,7 @@
         "Formation of new craters",
         "Movement of tectonic plates"
       ],
-      "correct_index": "2",
+      "correct_index": 2,
       "responses": [
         "This is false",
         "This is false",
@@ -46,7 +46,7 @@
         "Mars",
         "Venus"
       ],
-      "correct_index": "3",
+      "correct_index": 3,
       "responses": [
         "This is false",
         "This is false",
@@ -64,7 +64,7 @@
         "Raman scattering",
         "Compton scattering"
       ],
-      "correct_index": "0",
+      "correct_index": 0,
       "responses": [
         "This phenomena is called Rayleigh scattering because blue light scatters more it can be seen from many angles here on Earth so most of the time the sky looks blue. During sunset the angle of the sun to our eyes is more direct. So the sky can look red or orange because that red light is making its way to us.",
         "This is false",
@@ -82,7 +82,7 @@
         "Lightning",
         "A collision with an asteroid or meteorite or comet"
       ],
-      "correct_index": "3",
+      "correct_index": 3,
       "responses": [
         "This is false",
         "This is false",
@@ -100,7 +100,7 @@
         "North",
         "South"
       ],
-      "correct_index": "1",
+      "correct_index": 1,
       "responses": [
         "This is false",
         "You can tell it’s facing away from the sun because Curiosity’s self-portrait is of its shadow!",
@@ -118,7 +118,7 @@
         "Cumulonimbus",
         "Altocumulus"
       ],
-      "correct_index": "2",
+      "correct_index": 2,
       "responses": [
         "This is false",
         "This is false",
@@ -136,7 +136,7 @@
         "Crystalline",
         "Fossils"
       ],
-      "correct_index": "1",
+      "correct_index": 1,
       "responses": [
         "This is false",
         "Magnetite is the mineral found in rocks that makes them magnetic",
@@ -155,7 +155,7 @@
         "200 meters",
         "650 meters"
       ],
-      "correct_index": "3",
+      "correct_index": 3,
       "responses": [
         "This is false",
         "This is false",
