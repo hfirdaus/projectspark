@@ -73,8 +73,8 @@
       ]
     },
     {
-      "question": "What created rippled craters on the Moon?",
-      "celestial_body": "The Moon",
+      "question": "Uranus has 27 known moons, each with their own different landscapes! Here on Earth, we only have one moon, and it has a unique landscape as well. What created the rippled craters on the Moon?",
+      "celestial_body": "Uranus",
       "location": "West Wall of Gallery",
       "answers": [
         "Wind",
@@ -139,14 +139,15 @@
       "correct_index": 1,
       "responses": [
         "This is false",
-        "Magnetite is the mineral found in rocks that makes them magnetic and it is commonly found in igneous and metamorphic rocks.",
+        "Magnetite is the mineral found in rocks that makes them magnetic",
+        "and it is commonly found in igneous and metamorphic rocks.",
         "This is false",
         "This is false"
       ]
     },
     {
-      "question": "Neptune and Uranus are called \"ice giants\" because they have mantles of water, ammonia and methane in a dense fluid instead of gas - even though that wouldn't seem much like ice to us! Here in Calgary, we used to be covered in a glacier, and then a lake -- what was the depth of the \"icy ocean\" over us?",
-      "celestial_body": "Neptune and Uranus",
+      "question": "Neptune is called an \"ice giant\" because it has mantles of water, ammonia and methane in a dense fluid instead of gas - even though that wouldn't seem much like ice to us! Here in Calgary, we used to be covered in a glacier, and then a lake -- what was the depth of the \"icy ocean\" over us?",
+      "celestial_body": "Neptune",
       "location": "East Wall of the Gallery",
       "answers": [
         "100 meters",
