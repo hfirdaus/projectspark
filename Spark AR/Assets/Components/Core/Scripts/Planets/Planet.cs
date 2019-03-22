@@ -24,11 +24,15 @@ public class Planet : MonoBehaviour
 	public float orbit_incl;
 	public float rotation_per;
 
-	#endregion
 
-	#region Fields
+    public string name;
+    public bool isCollected = false;
+    public Question questionData;
+    #endregion
 
-	Collider m_collider;
+    #region Fields
+
+    Collider m_collider;
 	Renderer m_renderer;
 
 	public Collider Collider => m_collider ?? (m_collider = GetComponent<Collider>());
