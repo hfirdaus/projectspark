@@ -70,6 +70,10 @@ namespace GoogleARCore.Examples.AugmentedImage
                 FrameUpperRight.SetActive(false);
                 return;
             }
+            else
+            {
+                Debug.Log(Image.DatabaseIndex);
+            }
 
             float halfWidth = Image.ExtentX / 2;
             float halfHeight = Image.ExtentZ / 2;

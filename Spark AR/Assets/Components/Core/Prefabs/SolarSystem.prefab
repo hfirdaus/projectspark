@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4805996852614672668}
   - component: {fileID: 4805996852614672669}
-  - component: {fileID: 6212934424971790718}
+  - component: {fileID: 5223737156932672401}
   m_Layer: 0
   m_Name: SolarSystem
   m_TagString: Untagged
@@ -57,7 +57,7 @@ MonoBehaviour:
   RadiusScale: 2
   TimeScale: 0.00001
   GhostMaterial: {fileID: 2100000, guid: 34b12f68c4ce82d4cbda7bdb73f452ea, type: 2}
---- !u!114 &6212934424971790718
+--- !u!114 &5223737156932672401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

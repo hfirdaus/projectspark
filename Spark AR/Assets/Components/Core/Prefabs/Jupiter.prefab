@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8001109732759877999}
   - component: {fileID: 8001109732759877996}
   - component: {fileID: 8001109732759877997}
+  - component: {fileID: 704599450345315120}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8001109732759877779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.72, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,3 +111,22 @@ MonoBehaviour:
   orbit_per: 4331
   orbit_incl: 1.3
   rotation_per: -9.9
+  name: 
+  isCollected: 0
+  questionData: {fileID: 0}
+--- !u!114 &704599450345315120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001109732759877779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrameLowerLeft: {fileID: 8001109732759877779}
+  FrameLowerRight: {fileID: 8001109732759877779}
+  FrameUpperLeft: {fileID: 8001109732759877779}
+  FrameUpperRight: {fileID: 8001109732759877779}
