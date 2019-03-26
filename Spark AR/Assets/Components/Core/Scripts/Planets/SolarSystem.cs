@@ -10,6 +10,7 @@ public class SolarSystem : Singleton<SolarSystem>
 	public float OrbitScale = 3f;
 	public float RadiusScale = 1f;
 	public float TimeScale = 1f;
+    public float planet_offset;
 
 	private const float daysToSeconds = 60.0f * 60.0f * 24.0f;
 	private const float hoursToSeconds = 60 * 60;
@@ -29,19 +30,18 @@ public class SolarSystem : Singleton<SolarSystem>
 		// Make sure everything is invisible!!!
 		TheSun = transform.GetChild(0).gameObject;
 		Planets = gameObject.GetComponentsInChildren<Planet>().ToList();
-
 		Init(transform.position, transform.up);
 	}
 
 	void Update()
 	{
-		//if (!Visible)
-		//	return;
+        //if (!Visible)
+        //    return;
 
-		Planets.ForEach(p => UpdatePlanetRotation(p));
-	}
+        Planets.ForEach(p => UpdatePlanetRotation(p));
+    }
 
-	public void SetVisibility(bool visible)
+    public void SetVisibility(bool visible)
 	{
 		if (Visible == visible)
 			return;
@@ -51,7 +51,6 @@ public class SolarSystem : Singleton<SolarSystem>
 		Planets.ForEach(p => p.SetAlpha(visible ? 1f : 0f));
 
 		// DO NOT FUCKING LEAVE THIS IN THE FINAL PROJECT
-		// TODO: GO FUCK YOURSELF
 		TheSun.GetComponent<Renderer>().material.color = TheSun.GetComponent<Renderer>().material.color.WithAlpha(visible ? 1f : 0f);
 	}
 
@@ -67,15 +66,19 @@ public class SolarSystem : Singleton<SolarSystem>
 
 		foreach (Planet planet in Planets)
 		{
-			planet.transform.position = new Vector3((OrbitScale * Mathf.Log(planet.orbit_radius)) - (3f * OrbitScale + 1f), 0f, 0f);
 
-			float rand = Random.value * 359f;
+            
+            //planet.transform.position = new Vector3((Mathf.Log(planet.orbit_radius)) - (3f * OrbitScale + 1f), pos.y, 0);
+            planet.transform.position = new Vector3((Mathf.Log(planet.orbit_radius) * OrbitScale) - planet_offset, pos.y, 0);
+            
+            planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
+            float rand = Random.value * 359f;
 			planet.transform.RotateAround(transform.position, Vector3.up, rand);
 			planet.transform.Rotate(planet.transform.up, -rand);
+            //print(planet.name + ":a " + planet.transform.position);
 
-			planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
 
-			planet.transform.Rotate(-Vector3.forward, planet.tilt);
+            planet.transform.Rotate(-Vector3.forward, planet.tilt);
 		}
 	}
 

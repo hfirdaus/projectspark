@@ -45,7 +45,7 @@ public class Planet : MonoBehaviour
 	void Awake()
 	{
 		collectedMaterial = Renderer.material;
-		SetCollected(false);
+		//SetCollected(false);
 	}
 
 	public void SetCollected(bool collected)
