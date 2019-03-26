@@ -75,11 +75,15 @@ namespace GoogleARCore.Examples.HelloAR
         /// </summary>
         public GameObject SearchingForPlaneUI;
 
+        private GameObject SolarInstance;
+
         /// <summary>
         /// The rotation in degrees need to apply to model when the Andy model is placed.
         /// </summary>
         private const float k_ModelRotation = 90.0f;
-
+        private const float max_scale = 10f;
+        private const float min_scale = 0.1f;
+        private const float scale_mod = 0.1f;
         /// <summary>
         /// A list to hold all planes ARCore is tracking in the current frame. This object is used across
         /// the application to avoid per-frame allocations.
@@ -162,7 +166,8 @@ namespace GoogleARCore.Examples.HelloAR
 
                     // Compensate for the hitPose rotation facing away from the raycast (i.e. camera).
                     solarArray.transform.Rotate(0, k_ModelRotation, 0, Space.Self);
-                    solarArray.transform.localScale = solarArray.transform.localScale * 0.5f;
+
+                    //solarArray.transform.localScale = solarArray.transform.localScale * 0.5f;
                     // Create an anchor to allow ARCore to track the hitpoint as understanding of the physical
                     // world evolves.
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
@@ -170,10 +175,59 @@ namespace GoogleARCore.Examples.HelloAR
                     //sequencer.transform.position = anchor.transform.position;
                     // Make system model a child of the anchor.
                     solarArray.transform.parent = anchor.transform;
+
+                    SolarInstance = solarArray;
                 }
             }
         }
 
+
+        public void IncTS()
+        {
+            if (SolarInstance != null)
+            {
+                SolarInstance.GetComponentInChildren<SolarSystem>().IncrementTimeScale();
+            }
+        }
+        public void DecTS()
+        {
+            if (SolarInstance != null)
+            {
+                SolarInstance.GetComponentInChildren<SolarSystem>().DecrementTimeScale();
+            }
+        }
+
+        public void IncrScale()
+        {
+            if (SolarInstance != null && SolarInstance.transform.localScale.x + scale_mod <= max_scale)
+            {
+                SolarSystem s = SolarInstance.GetComponentInChildren<SolarSystem>();
+                Planet[] plan = s.GetComponentsInChildren<Planet>();
+                foreach(Planet p in plan)
+                {
+                    s.transform.localScale += Vector3.one * scale_mod;
+                    s.transform.localPosition += Vector3.one * scale_mod;
+                }
+            }
+        }
+        public void DecrScale()
+        {
+            if (SolarInstance != null && SolarInstance.transform.localScale.x - scale_mod > min_scale)
+            {
+                SolarSystem s = SolarInstance.GetComponentInChildren<SolarSystem>();
+                Planet[] plan = s.GetComponentsInChildren<Planet>();
+                foreach (Planet p in plan)
+                {
+                    s.transform.localScale -= Vector3.one * scale_mod;
+                    s.transform.localPosition -= Vector3.one * scale_mod;
+                }
+            }
+            else
+            {
+
+            }
+
+        }
         /// <summary>
         /// Check and update the application lifecycle.
         /// </summary>

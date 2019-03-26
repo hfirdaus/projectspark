@@ -12,7 +12,8 @@ public class SolarSystem : Singleton<SolarSystem>
 	public float TimeScale = 1f;
     public float planet_offset;
 
-	private const float daysToSeconds = 60.0f * 60.0f * 24.0f;
+    private const float time_mod = 0.001f;
+    private const float daysToSeconds = 60.0f * 60.0f * 24.0f;
 	private const float hoursToSeconds = 60 * 60;
 	private const float sun_diameter = 1392000;
 
@@ -97,4 +98,45 @@ public class SolarSystem : Singleton<SolarSystem>
 		//keep planet in same orientation
 		planet.transform.RotateAround(planet.transform.position, Vector3.up, rotation);
 	}
+
+    public void IncrementTimeScale()
+    {
+        if (TimeScale + time_mod < 1){
+            TimeScale += time_mod;
+        }
+        
+    }
+    public void DecrementTimeScale()
+    {
+        if (TimeScale - time_mod > 0){
+            TimeScale -= time_mod;
+        }
+        else
+        {
+            TimeScale = 0;
+        }
+    }
+
+    public void IncrementSize()
+    {
+        if (TimeScale + time_mod < 1)
+        {
+            TimeScale += time_mod;
+        }
+
+    }
+    public void DecrementSize()
+    {
+        if (TimeScale - time_mod > 0)
+        {
+            TimeScale -= time_mod;
+        }
+        else
+        {
+            TimeScale = 0;
+        }
+    }
+
+
+
 }
