@@ -57,6 +57,11 @@ namespace GoogleARCore.Examples.AugmentedImage
         /// </summary>
         public GameObject FrameUpperRight;
 
+        public void Start()
+        {
+            
+        }
+
         /// <summary>
         /// The Unity Update method.
         /// </summary>
@@ -69,10 +74,6 @@ namespace GoogleARCore.Examples.AugmentedImage
                 FrameUpperLeft.SetActive(false);
                 FrameUpperRight.SetActive(false);
                 return;
-            }
-            else
-            {
-                Debug.Log(Image.DatabaseIndex);
             }
 
             float halfWidth = Image.ExtentX / 2;

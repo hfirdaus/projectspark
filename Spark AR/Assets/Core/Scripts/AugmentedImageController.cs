@@ -1,4 +1,4 @@
-//-----------------------------------------------------------------------
+﻿//-----------------------------------------------------------------------
 // <copyright file="AugmentedImageExampleController.cs" company="Google">
 //
 // Copyright 2018 Google Inc. All Rights Reserved.
@@ -18,18 +18,18 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace GoogleARCore.Examples.AugmentedImage
-{
+    
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
     using GoogleARCore;
     using UnityEngine;
     using UnityEngine.UI;
+    using GoogleARCore.Examples.AugmentedImage;
 
-    /// <summary>
-    /// Controller for AugmentedImage example.
-    /// </summary>
-    public class AugmentedImageExampleController : MonoBehaviour
+/// <summary>
+/// Controller for AugmentedImage example.
+/// </summary>
+public class AugmentedImageController : MonoBehaviour
     {
         /// <summary>
         /// A prefab for visualizing an AugmentedImage.
@@ -40,6 +40,8 @@ namespace GoogleARCore.Examples.AugmentedImage
         /// The overlay containing the fit to scan user guide.
         /// </summary>
         public GameObject FitToScanOverlay;
+
+        public TrackerManager trackerManager;
 
         private Dictionary<int, AugmentedImageVisualizer> m_Visualizers
             = new Dictionary<int, AugmentedImageVisualizer>();
@@ -53,8 +55,8 @@ namespace GoogleARCore.Examples.AugmentedImage
         /// </summary>
         public void Update()
         {
-//            Debug.Log("Prefabs size: " + prefabs.size);
-//
+            Debug.Log("Prefabs size: " + prefabs.Count);
+            //
             // Exit the app when the 'back' button is pressed.
             if (Input.GetKey(KeyCode.Escape))
             {
@@ -74,16 +76,26 @@ namespace GoogleARCore.Examples.AugmentedImage
             // have a visualizer. Remove visualizers for stopped images.
             foreach (var image in m_TempAugmentedImages)
             {
+                Debug.Log("Planet " + image.Name + image.DatabaseIndex);
                 AugmentedImageVisualizer visualizer = null;
                 m_Visualizers.TryGetValue(image.DatabaseIndex, out visualizer);
                 if (image.TrackingState == TrackingState.Tracking && visualizer == null)
                 {
-                    // Create an anchor to ensure that ARCore keeps tracking this augmented image.
+                // Create an anchor to ensure that ARCore keeps tracking this augmented image.
                     Anchor anchor = image.CreateAnchor(image.CenterPose);
-                    visualizer = (AugmentedImageVisualizer) Instantiate(prefabs[image.DatabaseIndex], anchor.transform);
+
+                    visualizer = (AugmentedImageVisualizer)Instantiate(prefabs[image.DatabaseIndex], anchor.transform);
+                visualizer.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+                //TO DO CHECK THE ROTATION!!
+//                visualizer.transform.localRotation = new Vector3(0f, 0f, 90f);
                     visualizer.Image = image;
                     m_Visualizers.Add(image.DatabaseIndex, visualizer);
-                }
+                    if (image.DatabaseIndex > 0) // Not the solar system
+                    {
+                        trackerManager.PlanetTracked(image.Name, image.DatabaseIndex);
+                    }
+            }
                 else if (image.TrackingState == TrackingState.Stopped && visualizer != null)
                 {
                     m_Visualizers.Remove(image.DatabaseIndex);
@@ -104,4 +116,3 @@ namespace GoogleARCore.Examples.AugmentedImage
             FitToScanOverlay.SetActive(true);
         }
     }
-}
