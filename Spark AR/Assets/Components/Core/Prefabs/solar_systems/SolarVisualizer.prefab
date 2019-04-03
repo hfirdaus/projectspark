@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1471065186460811938}
+  - component: {fileID: 7223435369537368326}
   m_Layer: 0
   m_Name: SolarVisualizer
   m_TagString: Untagged
@@ -25,12 +26,24 @@ Transform:
   m_GameObject: {fileID: 8882378899333261171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.00005, y: 0.00005, z: 0.00005}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4968876976213661167}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7223435369537368326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882378899333261171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &452237808546555123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,10 +126,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 2924148034681061130, guid: 3fb7b48c335064e479ed97e8be1ff69f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4805996852614672669, guid: 3fb7b48c335064e479ed97e8be1ff69f,
         type: 3}
       propertyPath: RadiusScale
-      value: 9000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4805996852614672669, guid: 3fb7b48c335064e479ed97e8be1ff69f,
         type: 3}
@@ -209,7 +227,8 @@ PrefabInstance:
       propertyPath: offset
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6212934424971790718, guid: 3fb7b48c335064e479ed97e8be1ff69f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3fb7b48c335064e479ed97e8be1ff69f, type: 3}
 --- !u!4 &4968876976213661167 stripped
 Transform:

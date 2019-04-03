@@ -993,7 +993,7 @@ PrefabInstance:
         type: 3}
       propertyPath: SessionConfig
       value: 
-      objectReference: {fileID: 11400000, guid: e3a0819a20dbf48e0b82c8d8d31b9d68,
+      objectReference: {fileID: 11400000, guid: cba6b079ca6f5f242899800f08a15a32,
         type: 2}
     - target: {fileID: 114451889682527732, guid: c10877f7cd5764de18d46d7b777d1faa,
         type: 3}
@@ -1106,7 +1106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492cc0813c4064ed79f2671a7c2633fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AugmentedImageVisualizerPrefab: {fileID: 4805996853219896063}
+  AugmentedImageVisualizerPrefab: {fileID: 7223435369537368326, guid: 9000c8feef493e645a1e1a1b032896be,
+    type: 3}
   FitToScanOverlay: {fileID: 2009875769}
 --- !u!4 &1571888380
 Transform:
@@ -1745,15 +1746,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb7b48c335064e479ed97e8be1ff69f, type: 3}
---- !u!114 &4805996853219896063 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6212934424971790718, guid: 3fb7b48c335064e479ed97e8be1ff69f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4805996853219896062}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
