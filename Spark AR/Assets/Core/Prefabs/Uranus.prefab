@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2420589752763200236}
   - component: {fileID: 2420589752763200235}
   - component: {fileID: 2420589752763200234}
+  - component: {fileID: 559674384062081770}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -111,5 +112,20 @@ MonoBehaviour:
   orbit_incl: 0.8
   rotation_per: 17.2
   name: 
-  isCollected: 0
-  questionData: {fileID: 0}
+  isGhost: 0
+--- !u!114 &559674384062081770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420589752763200232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrameLowerLeft: {fileID: 0}
+  FrameLowerRight: {fileID: 0}
+  FrameUpperLeft: {fileID: 0}
+  FrameUpperRight: {fileID: 0}

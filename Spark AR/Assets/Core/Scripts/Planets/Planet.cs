@@ -24,12 +24,15 @@ public class Planet : MonoBehaviour
 	public float orbit_per;
 	public float orbit_incl;
 	public float rotation_per;
+<<<<<<< HEAD:Spark AR/Assets/Core/Scripts/Planets/Planet.cs
     public float offset;
 
 
+=======
+    
+>>>>>>> Hadiya:Spark AR/Assets/Core/Scripts/Planets/Planet.cs
     public string name;
-    public bool isCollected = false;
-    public Question questionData;
+    public bool isGhost = false;
     #endregion
 
     #region Fields
@@ -41,28 +44,21 @@ public class Planet : MonoBehaviour
 	public Renderer Renderer => m_renderer ?? (m_renderer = GetComponent<Renderer>());
     private LineRenderer l;
 
-	public bool Collected { get; private set; } = true;
-
 	#endregion
 
 	void Awake()
 	{
         l = GetComponent<LineRenderer>();
 		collectedMaterial = Renderer.material;
-		//SetCollected(false);
 	}
 
-	public void SetCollected(bool collected)
+	public void SetGhost(bool isAGhost)
 	{
-		//if (Collected)
-		//	return;
-
-		Collected = collected;
-
+        isGhost = isAGhost;
 		// Animate the transition later
-		Renderer.material = collected ? collectedMaterial : ghostMaterial;
+		Renderer.material = isGhost ? collectedMaterial : ghostMaterial;
 	}
-
+    
 	public void SetAlpha(float alpha)
 	{
 		Renderer.material.color = Renderer.material.color.WithAlpha(alpha);

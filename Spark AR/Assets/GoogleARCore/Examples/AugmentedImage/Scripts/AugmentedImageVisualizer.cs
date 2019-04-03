@@ -40,6 +40,28 @@ namespace GoogleARCore.Examples.AugmentedImage
         /// <summary>
         /// A model for the lower left corner of the frame to place when an image is detected.
         /// </summary>
+        public GameObject FrameLowerLeft;
+
+        /// <summary>
+        /// A model for the lower right corner of the frame to place when an image is detected.
+        /// </summary>
+        public GameObject FrameLowerRight;
+
+        /// <summary>
+        /// A model for the upper left corner of the frame to place when an image is detected.
+        /// </summary>
+        public GameObject FrameUpperLeft;
+
+        /// <summary>
+        /// A model for the upper right corner of the frame to place when an image is detected.
+        /// </summary>
+        public GameObject FrameUpperRight;
+
+        public void Start()
+        {
+            
+        }
+
         /// <summary>
         /// The Unity Update method.
         /// </summary>

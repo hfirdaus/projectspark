@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     // State
     public bool isInfoVisible = true;
     public Planet planetPlayingFor = null; 
-    public List<Planet> planets;
+    public List<SolarSystemPlanet> planets;
     public int planetsCollected
     {
         get { return planets.Count(p => p.isCollected); }

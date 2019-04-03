@@ -58,7 +58,7 @@ MonoBehaviour:
   RadiusScale: 0.5
   TimeScale: 0.001
   GhostMaterial: {fileID: 2100000, guid: 34b12f68c4ce82d4cbda7bdb73f452ea, type: 2}
---- !u!114 &6212934424971790718
+--- !u!114 &5223737156932672401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -452,6 +452,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001109732759877778, guid: 963fa59bdbdb45843b9d81e0a9ca4e9e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001109732759877778, guid: 963fa59bdbdb45843b9d81e0a9ca4e9e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001109732759877778, guid: 963fa59bdbdb45843b9d81e0a9ca4e9e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd935416bb06dfd4d84be86fdc395a19, type: 3}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4393266591027265352}
   - component: {fileID: 4393266591027265355}
   - component: {fileID: 6345524093167892495}
+  - component: {fileID: 3403475800568648514}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -112,8 +113,27 @@ MonoBehaviour:
   orbit_incl: 0
   rotation_per: -23.9
   name: 
-  isCollected: 0
-  questionData: {fileID: 0}
+  isGhost: 0
+--- !u!114 &3403475800568648514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393266591027265357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrameLowerLeft: {fileID: 1147485199789080331, guid: 02414ff92c1b03845ac48da9c69797a2,
+    type: 3}
+  FrameLowerRight: {fileID: 1147485199789080331, guid: 02414ff92c1b03845ac48da9c69797a2,
+    type: 3}
+  FrameUpperLeft: {fileID: 1147485199789080331, guid: 02414ff92c1b03845ac48da9c69797a2,
+    type: 3}
+  FrameUpperRight: {fileID: 1147485199789080331, guid: 02414ff92c1b03845ac48da9c69797a2,
+    type: 3}
 --- !u!1 &7652798198230568210
 GameObject:
   m_ObjectHideFlags: 0

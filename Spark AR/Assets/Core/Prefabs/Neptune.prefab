@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1391961497858291925}
   - component: {fileID: 1391961497858291926}
   - component: {fileID: 1391961497858291927}
+  - component: {fileID: 758092012077171132}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Untagged
@@ -111,5 +112,20 @@ MonoBehaviour:
   orbit_incl: 1.8
   rotation_per: -16.1
   name: 
-  isCollected: 0
-  questionData: {fileID: 0}
+  isGhost: 0
+--- !u!114 &758092012077171132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391961497858291913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrameLowerLeft: {fileID: 0}
+  FrameLowerRight: {fileID: 0}
+  FrameUpperLeft: {fileID: 0}
+  FrameUpperRight: {fileID: 0}

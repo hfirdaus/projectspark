@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1147485199789080335}
   - component: {fileID: 1147485199789080328}
   - component: {fileID: 1147485199789080329}
+  - component: {fileID: 6879601415409147820}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -111,5 +112,20 @@ MonoBehaviour:
   orbit_incl: 2.5
   rotation_per: -10.7
   name: 
-  isCollected: 0
-  questionData: {fileID: 0}
+  isGhost: 0
+--- !u!114 &6879601415409147820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147485199789080331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FrameLowerLeft: {fileID: 0}
+  FrameLowerRight: {fileID: 0}
+  FrameUpperLeft: {fileID: 0}
+  FrameUpperRight: {fileID: 0}
