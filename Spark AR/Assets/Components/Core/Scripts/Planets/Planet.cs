@@ -16,6 +16,7 @@ public class Planet : MonoBehaviour
 	//public Sprite TooltipSprite;
 	Material collectedMaterial;
 	Material ghostMaterial => SolarSystem.Instance.GhostMaterial;
+    OrbitVisualizer orb;
 
 	public float diameter;
 	public float tilt;
@@ -23,6 +24,7 @@ public class Planet : MonoBehaviour
 	public float orbit_per;
 	public float orbit_incl;
 	public float rotation_per;
+    public float offset;
 
 
     public string name;
@@ -37,6 +39,7 @@ public class Planet : MonoBehaviour
 
 	public Collider Collider => m_collider ?? (m_collider = GetComponent<Collider>());
 	public Renderer Renderer => m_renderer ?? (m_renderer = GetComponent<Renderer>());
+    private LineRenderer l;
 
 	public bool Collected { get; private set; } = true;
 
@@ -44,6 +47,7 @@ public class Planet : MonoBehaviour
 
 	void Awake()
 	{
+        l = GetComponent<LineRenderer>();
 		collectedMaterial = Renderer.material;
 		//SetCollected(false);
 	}
@@ -63,5 +67,4 @@ public class Planet : MonoBehaviour
 	{
 		Renderer.material.color = Renderer.material.color.WithAlpha(alpha);
 	}
-
 }

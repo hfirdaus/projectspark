@@ -19,6 +19,8 @@ public class SolarSystem : Singleton<SolarSystem>
 
 	GameObject TheSun;
 	List<Planet> Planets;
+    List<OrbitVisualizer> orbits;
+    public OrbitVisualizer ov;
 
 	public bool Visible { get; private set; }
 
@@ -31,7 +33,9 @@ public class SolarSystem : Singleton<SolarSystem>
 		// Make sure everything is invisible!!!
 		TheSun = transform.GetChild(0).gameObject;
 		Planets = gameObject.GetComponentsInChildren<Planet>().ToList();
+        orbits = new List<OrbitVisualizer>();
 		Init(transform.position, transform.up);
+
 	}
 
 	void Update()
@@ -40,6 +44,7 @@ public class SolarSystem : Singleton<SolarSystem>
         //    return;
 
         Planets.ForEach(p => UpdatePlanetRotation(p));
+        
     }
 
     public void SetVisibility(bool visible)
@@ -64,14 +69,26 @@ public class SolarSystem : Singleton<SolarSystem>
 	{
 		transform.position = pos;
 		transform.up = up;
-
+        int i = 0;
 		foreach (Planet planet in Planets)
 		{
-
-            
+            print(i);
+            i++;
             //planet.transform.position = new Vector3((Mathf.Log(planet.orbit_radius)) - (3f * OrbitScale + 1f), pos.y, 0);
-            planet.transform.position = new Vector3((Mathf.Log(planet.orbit_radius) * OrbitScale) - planet_offset, pos.y, 0);
-            
+            float xpos = Mathf.Log(planet.orbit_radius) * OrbitScale - planet.offset;
+            if (xpos < 0)
+            {
+                xpos = 0;
+            }
+            planet.transform.position = new Vector3(xpos, pos.y, 0);
+            //draw orbit
+            //OrbitVisualizer t = Instantiate(ov);
+            //t.transform.SetParent(TheSun.transform);
+           // t.transform.position = Vector3.zero;
+            //t.drawOrbit(planet.transform.position.x, t.transform.parent.position.y,  50);
+            //orbits.Add(t);
+           // planet.DrawOrbit();
+
             planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
             float rand = Random.value * 359f;
 			planet.transform.RotateAround(transform.position, Vector3.up, rand);
@@ -80,7 +97,8 @@ public class SolarSystem : Singleton<SolarSystem>
 
 
             planet.transform.Rotate(-Vector3.forward, planet.tilt);
-		}
+            
+        }
 	}
 
 	/// <summary>
