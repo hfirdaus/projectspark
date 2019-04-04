@@ -10,8 +10,10 @@ public class SolarSystem : Singleton<SolarSystem>
 	public float OrbitScale = 3f;
 	public float RadiusScale = 1f;
 	public float TimeScale = 1f;
+    public float planet_offset;
 
-	private const float daysToSeconds = 60.0f * 60.0f * 24.0f;
+    private const float time_mod = 0.001f;
+    private const float daysToSeconds = 60.0f * 60.0f * 24.0f;
 	private const float hoursToSeconds = 60 * 60;
 	private const float sun_diameter = 1392000;
 
@@ -25,15 +27,19 @@ public class SolarSystem : Singleton<SolarSystem>
     
     public Material GhostMaterial;
 
-	#endregion
+    List<OrbitVisualizer> orbits;
 
-	void Awake()
+    public OrbitVisualizer ov;
+
+    #endregion
+
+    void Awake()
 	{
 		// Make sure everything is invisible!!!
 		TheSun = transform.GetChild(0).gameObject;
 		List<Planet> PlanetComponentList = gameObject.GetComponentsInChildren<Planet>().ToList();
         PlanetComponentList.ForEach(p => Planets.Add((SolarSystemPlanet) p));
-
+        orbits = new List<OrbitVisualizer>();
         Init(transform.position, transform.up);
 	}
 
@@ -66,22 +72,53 @@ public class SolarSystem : Singleton<SolarSystem>
 	/// <param name="up">Up direction</param>
 	public void Init(Vector3 pos, Vector3 up)
 	{
-		transform.position = pos;
-		transform.up = up;
+        //transform.position = pos;
+        //transform.up = up;
 
-		foreach (Planet planet in Planets)
-		{
-			planet.transform.position = new Vector3((OrbitScale * Mathf.Log(planet.orbit_radius)) - (3f * OrbitScale + 1f), 0f, 0f);
+        //foreach (Planet planet in Planets)
+        //{
+        //	planet.transform.position = new Vector3((OrbitScale * Mathf.Log(planet.orbit_radius)) - (3f * OrbitScale + 1f), 0f, 0f);
 
-			float rand = Random.value * 359f;
-			planet.transform.RotateAround(transform.position, Vector3.up, rand);
-			planet.transform.Rotate(planet.transform.up, -rand);
+        //	float rand = Random.value * 359f;
+        //	planet.transform.RotateAround(transform.position, Vector3.up, rand);
+        //	planet.transform.Rotate(planet.transform.up, -rand);
 
-			planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
+        //	planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
 
-			planet.transform.Rotate(-Vector3.forward, planet.tilt);
-		}
-	}
+        //	planet.transform.Rotate(-Vector3.forward, planet.tilt);
+        //}
+
+        transform.position = pos;
+        transform.up = up;
+        int i = 0;
+        foreach (Planet planet in Planets)
+        {
+            print(i);
+            i++;
+            //planet.transform.position = new Vector3((Mathf.Log(planet.orbit_radius)) - (3f * OrbitScale + 1f), pos.y, 0);
+            float xpos = Mathf.Log(planet.orbit_radius) * OrbitScale - planet.offset;
+            if (xpos < 0)
+            {
+                xpos = 0;
+            }
+            planet.transform.position = new Vector3(xpos, pos.y, 0);
+            //draw orbit
+            //OrbitVisualizer t = Instantiate(ov);
+            //t.transform.SetParent(TheSun.transform);
+            // t.transform.position = Vector3.zero;
+            //t.drawOrbit(planet.transform.position.x, t.transform.parent.position.y,  50);
+            //orbits.Add(t);
+            // planet.DrawOrbit();
+
+            planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
+            float rand = Random.value * 359f;
+            planet.transform.RotateAround(transform.position, Vector3.up, rand);
+            planet.transform.Rotate(planet.transform.up, -rand);
+            //print(planet.name + ":a " + planet.transform.position);
+
+            planet.transform.Rotate(-Vector3.forward, planet.tilt);
+        }
+}
 
 	/// <summary>
 	/// Updates a planet's rotation. Is based on WOAH
@@ -98,4 +135,42 @@ public class SolarSystem : Singleton<SolarSystem>
 		//keep planet in same orientation
 		planet.transform.RotateAround(planet.transform.position, Vector3.up, rotation);
 	}
+
+    public void IncrementTimeScale()
+    {
+        if (TimeScale + time_mod < 1)
+        {
+            TimeScale += time_mod;
+        }
+    }
+        public void DecrementTimeScale()
+    {
+        if (TimeScale - time_mod > 0){
+            TimeScale -= time_mod;
+        }
+        else
+        {
+            TimeScale = 0;
+        }
+    }
+
+    public void IncrementSize()
+    {
+        if (TimeScale + time_mod < 1)
+        {
+            TimeScale += time_mod;
+        }
+
+    }
+    public void DecrementSize()
+    {
+        if (TimeScale - time_mod > 0)
+        {
+            TimeScale -= time_mod;
+        }
+        else
+        {
+            TimeScale = 0;
+        }
+    }
 }

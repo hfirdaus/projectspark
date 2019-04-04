@@ -112,10 +112,6 @@ MonoBehaviour:
   orbit_incl: 3.4
   rotation_per: 5832.5
   name: 
-<<<<<<< HEAD:Spark AR/Assets/Core/Prefabs/Venus.prefab
-  isCollected: 0
-  questionData: {fileID: 0}
-=======
   isGhost: 0
 --- !u!114 &3363247975850147217
 MonoBehaviour:
@@ -133,4 +129,3 @@ MonoBehaviour:
   FrameLowerRight: {fileID: 0}
   FrameUpperLeft: {fileID: 0}
   FrameUpperRight: {fileID: 0}
->>>>>>> Hadiya:Spark AR/Assets/Core/Prefabs/Venus.prefab

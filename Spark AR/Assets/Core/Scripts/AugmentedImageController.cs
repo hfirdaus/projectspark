@@ -55,7 +55,7 @@ public class AugmentedImageController : MonoBehaviour
         /// </summary>
         public void Update()
         {
-            Debug.Log("Prefabs size: " + prefabs.Count);
+//            Debug.Log("Prefabs size: " + prefabs.Count);
             //
             // Exit the app when the 'back' button is pressed.
             if (Input.GetKey(KeyCode.Escape))
@@ -79,26 +79,36 @@ public class AugmentedImageController : MonoBehaviour
                 Debug.Log("Planet " + image.Name + image.DatabaseIndex);
                 AugmentedImageVisualizer visualizer = null;
                 m_Visualizers.TryGetValue(image.DatabaseIndex, out visualizer);
+            Debug.Log("yo1");
+            Debug.Log(image.TrackingState == TrackingState.Tracking);
+            Debug.Log(visualizer == null);
                 if (image.TrackingState == TrackingState.Tracking && visualizer == null)
                 {
                 // Create an anchor to ensure that ARCore keeps tracking this augmented image.
                     Anchor anchor = image.CreateAnchor(image.CenterPose);
+                Debug.Log("yo6");
 
-                    visualizer = (AugmentedImageVisualizer)Instantiate(prefabs[image.DatabaseIndex], anchor.transform);
+                visualizer = (AugmentedImageVisualizer)Instantiate(prefabs[image.DatabaseIndex], anchor.transform);
                 visualizer.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                Debug.Log("yo7");
 
                 //TO DO CHECK THE ROTATION!!
-//                visualizer.transform.localRotation = new Vector3(0f, 0f, 90f);
-                    visualizer.Image = image;
-                    m_Visualizers.Add(image.DatabaseIndex, visualizer);
+                //                visualizer.transform.localRotation = new Vector3(0f, 0f, 90f);
+                visualizer.Image = image;
+                Debug.Log("yo8");
+                m_Visualizers.Add(image.DatabaseIndex, visualizer);
                     if (image.DatabaseIndex > 0) // Not the solar system
-                    {
-                        trackerManager.PlanetTracked(image.Name, image.DatabaseIndex);
+                {
+                    Debug.Log("y09");
+
+                    trackerManager.PlanetTracked(image.Name, image.DatabaseIndex);
                     }
             }
                 else if (image.TrackingState == TrackingState.Stopped && visualizer != null)
                 {
-                    m_Visualizers.Remove(image.DatabaseIndex);
+                Debug.Log("yo10");
+
+                m_Visualizers.Remove(image.DatabaseIndex);
                     GameObject.Destroy(visualizer.gameObject);
                 }
             }

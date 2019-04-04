@@ -112,6 +112,7 @@ MonoBehaviour:
   orbit_per: 365.2
   orbit_incl: 0
   rotation_per: -23.9
+  offset: 0
   name: 
   isGhost: 0
 --- !u!114 &3403475800568648514

@@ -16,6 +16,7 @@ public class OrbitVisualizer : MonoBehaviour
     private float zradius;
     private float ypos;
     LineRenderer line;
+
     public OrbitVisualizer()
     {
     }

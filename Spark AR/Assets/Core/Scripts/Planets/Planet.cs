@@ -24,13 +24,8 @@ public class Planet : MonoBehaviour
 	public float orbit_per;
 	public float orbit_incl;
 	public float rotation_per;
-<<<<<<< HEAD:Spark AR/Assets/Core/Scripts/Planets/Planet.cs
     public float offset;
 
-
-=======
-    
->>>>>>> Hadiya:Spark AR/Assets/Core/Scripts/Planets/Planet.cs
     public string name;
     public bool isGhost = false;
     #endregion

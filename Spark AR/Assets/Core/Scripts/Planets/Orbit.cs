@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Oribt : MonoBehaviour
+public class Orbit : MonoBehaviour
 {
     public LineRenderer line;
     // Start is called before the first frame update
