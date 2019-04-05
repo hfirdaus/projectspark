@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 137}
   - component: {fileID: 164}
   - component: {fileID: 163}
-  - component: {fileID: 187}
+  - component: {fileID: 174}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -877,7 +877,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 83}
+  - {fileID: 75}
   m_Father: {fileID: 72}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -973,7 +973,7 @@ MonoBehaviour:
   name: 
   isGhost: 0
   isCollected: 0
---- !u!114 &187
+--- !u!114 &174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1143,7 +1143,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 63}
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655793353707240a195aee929b80d41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &56
+--- !u!1 &51
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1393,9 +1393,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 83}
-  - component: {fileID: 127}
-  - component: {fileID: 104}
+  - component: {fileID: 75}
+  - component: {fileID: 118}
+  - component: {fileID: 97}
   m_Layer: 0
   m_Name: Saturn Ring
   m_TagString: Untagged
@@ -1403,13 +1403,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &83
+--- !u!4 &75
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56}
+  m_GameObject: {fileID: 51}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1417,21 +1417,21 @@ Transform:
   m_Father: {fileID: 70}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &127
+--- !u!33 &118
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56}
+  m_GameObject: {fileID: 51}
   m_Mesh: {fileID: 0}
---- !u!23 &104
+--- !u!23 &97
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56}
+  m_GameObject: {fileID: 51}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
