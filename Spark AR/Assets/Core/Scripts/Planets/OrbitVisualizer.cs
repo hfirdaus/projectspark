@@ -25,7 +25,7 @@ public class OrbitVisualizer : MonoBehaviour
     {
     }
 
-    public void drawOrbit(float radius, float y_off, int segments)
+    public void drawOrbit(float radius, float y_off, int segments, float thickness)
     {
         this.segments = segments;
         line = gameObject.GetComponent<LineRenderer>();

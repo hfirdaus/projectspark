@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class SolarSystem : Singleton<SolarSystem>
 {
-	#region Fields
+    #region Fields
 
+    public float orbit_thickness = 0.1f;
 	public float OrbitScale = 3f;
 	public float RadiusScale = 1f;
 	public float TimeScale = 1f;
@@ -22,7 +23,6 @@ public class SolarSystem : Singleton<SolarSystem>
     GameObject TheSun;
 
     List<SolarSystemPlanet> Planets = new List<SolarSystemPlanet>();
-	
     public bool Visible { get; private set; }
     
     public Material GhostMaterial;
@@ -37,18 +37,18 @@ public class SolarSystem : Singleton<SolarSystem>
 	{
 		// Make sure everything is invisible!!!
 		TheSun = transform.GetChild(0).gameObject;
-		List<Planet> PlanetComponentList = gameObject.GetComponentsInChildren<Planet>().ToList();
-        PlanetComponentList.ForEach(p => Planets.Add((SolarSystemPlanet) p));
+        //List<Planet> PlanetComponentList = gameObject.GetComponentsInChildren<Planet>().ToList();
+        Planets = gameObject.GetComponentsInChildren<SolarSystemPlanet>().ToList();
+        //PlanetComponentList.ForEach(p => Planets.Add((SolarSystemPlanet) p));
         orbits = new List<OrbitVisualizer>();
         Init(transform.position, transform.up);
 	}
 
 	void Update()
 	{
-		//if (!Visible)
-		//	return;
-
-		Planets.ForEach(p => UpdatePlanetRotation(p));
+        //if (!Visible)
+        //	return;
+        Planets.ForEach(p => UpdatePlanetRotation(p));
 	}
 
 	public void SetVisibility(bool visible)
@@ -64,7 +64,6 @@ public class SolarSystem : Singleton<SolarSystem>
 		// TODO: GO FUCK YOURSELF
 		TheSun.GetComponent<Renderer>().material.color = TheSun.GetComponent<Renderer>().material.color.WithAlpha(visible ? 1f : 0f);
 	}
-
 	/// <summary>
 	/// Call from FlowManager when seeing the ground plane for the first time.
 	/// </summary>
@@ -72,26 +71,12 @@ public class SolarSystem : Singleton<SolarSystem>
 	/// <param name="up">Up direction</param>
 	public void Init(Vector3 pos, Vector3 up)
 	{
-        //transform.position = pos;
-        //transform.up = up;
-
-        //foreach (Planet planet in Planets)
-        //{
-        //	planet.transform.position = new Vector3((OrbitScale * Mathf.Log(planet.orbit_radius)) - (3f * OrbitScale + 1f), 0f, 0f);
-
-        //	float rand = Random.value * 359f;
-        //	planet.transform.RotateAround(transform.position, Vector3.up, rand);
-        //	planet.transform.Rotate(planet.transform.up, -rand);
-
-        //	planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
-
-        //	planet.transform.Rotate(-Vector3.forward, planet.tilt);
-        //}
-
+        transform.position = pos;
+        transform.up = up;
         transform.position = pos;
         transform.up = up;
         int i = 0;
-        foreach (Planet planet in Planets)
+        foreach (SolarSystemPlanet planet in Planets)
         {
             print(i);
             i++;
@@ -103,12 +88,12 @@ public class SolarSystem : Singleton<SolarSystem>
             }
             planet.transform.position = new Vector3(xpos, pos.y, 0);
             //draw orbit
-            //OrbitVisualizer t = Instantiate(ov);
-            //t.transform.SetParent(TheSun.transform);
-            // t.transform.position = Vector3.zero;
-            //t.drawOrbit(planet.transform.position.x, t.transform.parent.position.y,  50);
-            //orbits.Add(t);
-            // planet.DrawOrbit();
+            OrbitVisualizer t = Instantiate(ov);
+            t.transform.SetParent(TheSun.transform);
+            t.transform.position = Vector3.zero;
+            t.drawOrbit(planet.transform.position.x, t.transform.parent.position.y, 50, orbit_thickness);
+            orbits.Add(t);
+            //planet.DrawOrbit();
 
             planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
             float rand = Random.value * 359f;
@@ -118,7 +103,7 @@ public class SolarSystem : Singleton<SolarSystem>
 
             planet.transform.Rotate(-Vector3.forward, planet.tilt);
         }
-}
+    }
 
 	/// <summary>
 	/// Updates a planet's rotation. Is based on WOAH
