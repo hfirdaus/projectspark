@@ -16,6 +16,8 @@ public class TrackerManager : MonoBehaviour
         Venus,
     }
 
+//    public static event PlanetTracket<PlanetName>()
+
     public void PlanetTracked(string planetName, int planetIndex)
     {
         // Call Game Controller to open question for that planet
