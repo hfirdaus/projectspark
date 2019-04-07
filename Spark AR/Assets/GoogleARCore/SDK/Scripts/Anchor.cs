@@ -110,10 +110,11 @@ namespace GoogleARCore
 			}
 
 			var pose = m_NativeSession.AnchorApi.GetPose(m_NativeHandle);
-			transform.position = Vector3.Lerp(transform.position, pose.position, Time.smoothDeltaTime);
-			transform.rotation = Quaternion.Lerp(transform.rotation, pose.rotation, Time.smoothDeltaTime);
 
-			TrackingState currentFrameTrackingState = TrackingState;
+            transform.position = Vector3.Lerp(transform.position, pose.position, Time.smoothDeltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, pose.rotation, Time.smoothDeltaTime);
+
+            TrackingState currentFrameTrackingState = TrackingState;
 			if (m_LastFrameTrackingState != currentFrameTrackingState)
 			{
 				bool isAnchorTracking = currentFrameTrackingState == TrackingState.Tracking;

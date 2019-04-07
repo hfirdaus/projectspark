@@ -39,6 +39,7 @@ namespace GoogleARCore.Examples.Common
         /// the application to avoid per-frame allocations.
         /// </summary>
         private List<DetectedPlane> m_NewPlanes = new List<DetectedPlane>();
+        private bool disabled = false;
 
         /// <summary>
         /// The Unity Update method.
@@ -46,7 +47,7 @@ namespace GoogleARCore.Examples.Common
         public void Update()
         {
             // Check that motion tracking is tracking.
-            if (Session.Status != SessionStatus.Tracking)
+            if (Session.Status != SessionStatus.Tracking || disabled)
             {
                 return;
             }
@@ -62,5 +63,16 @@ namespace GoogleARCore.Examples.Common
                 planeObject.GetComponent<DetectedPlaneVisualizer>().Initialize(m_NewPlanes[i]);
             }
         }
+
+        public void Disable()
+        {
+            foreach (Transform t in transform)
+            {
+                t.gameObject.SetActive(false);
+            }
+            disabled = true;
+        }
     }
+
+
 }
