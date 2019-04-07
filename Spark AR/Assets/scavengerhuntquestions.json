@@ -16,7 +16,8 @@
         "Auroras are named after the Roman goddess Aurora who heralded the coming of the sun from east to west and Borealis refers to the north. This is why the Aurora Borealis is also called the Northern Lights.",
         "This is false",
         "This is false"
-      ]
+      ],
+      "location_hint":"Look near where a nebula is hiding in a corner."
     },
     {
       "question": "Mercury has a magnetic field, but it isn't strong enough to fully protect it from the solar wind, so radiation bombards its southern pole. On earth, what do we call the light show in the Northern hemisphere when the Solar Wind interacts with Earth's magnetic field?",
@@ -32,7 +33,7 @@
       "responses": [
         "This is false",
         "This is false",
-        "Even though Mercury has a magnetic field, we wouldn't be able to see the Aurora there because it doesn't have enough atmosphere for the solar wind to excite particles we could see. Mercury was first observed in 265 BCE. Normally, you can only see it at twighlight because normally the sun's glare obscures it. In the 1960s, astronomers discovered that Mercury's day and year are the same length - 59 Earth-days.",
+        "Even though Mercury has a magnetic field, we wouldn't be able to see the Aurora there because it doesn't have enough atmosphere for the solar wind to excite particles we could see. Mercury was first observed in 265 BCE. Normally, you can only see it at twighlight because normally the sun's glare obscures it. In the 1960s, astronomers discovered that Mercury's day and year are the same length - 59 Earth-days. Can you figure out how many years old you would be on Mercury? Ask someone for help if you need it!",
         "This is false"
       ],
       "location_hint":"Look near where a nebula is hiding in a corner."
@@ -52,7 +53,7 @@
         "This is false",
         "This is false",
         "This is false",
-        "Venus has the most volcanoes of any planet in our solar system! Under any part of the atmosphere anywhere on Venus volcanoes can be found. Because Venus is so bright in the sky, humans have known about it for as long as we've kept records, and it has been sacred in many cultures. "
+        "Venus has the most volcanoes of any planet in our solar system! Under any part of the atmosphere anywhere on Venus volcanoes can be found. Because Venus is so bright in the sky, humans have known about it for as long as we've kept records, and it has been sacred in many cultures. You can go to the south side of the gallery near the windows, and make up a star-picture (asterism) about what you would have thought Venus was if you were an ancient human."
       ],
       "location_hint":"Beside the stream, a gallery of satellite images overlooks westward-facing planetary information."
     },
@@ -68,12 +69,12 @@
       ],
       "correct_index": 0,
       "responses": [
-        "This phenomena is called Rayleigh scattering because blue light scatters more it can be seen from many angles here on Earth so most of the time the sky looks blue. During sunset the angle of the sun to our eyes is more direct. So the sky can look red or orange because that red light is making its way to us.",
+        "This phenomena is called Rayleigh scattering because blue light scatters more it can be seen from many angles here on Earth so most of the time the sky looks blue. During sunset the angle of the sun to our eyes is more direct. So the sky can look red or orange because that red light is making its way to us. Which of the bottled sky colours is your favourite?",
         "This is false",
         "This is false",
         "This is false"
       ],
-      "location_hint":"Look where sunlight streams through the bottled colours of the sky."
+      "location_hint":"Look where sunlight streams through the bottled colours of sky."
     },
     {
       "question": "Uranus has 27 known moons, each with their own different landscapes! Here on Earth, we only have one moon, and it has a unique landscape as well. What created the rippled craters on the Moon?",
@@ -90,27 +91,28 @@
         "This is false",
         "This is false",
         "This is false",
-        "The collisions were so powerful and strong that they sent shockwaves through the Moon’s surface. These waves created craters with ripples like in water! Uranus had been observed since at least 128 BCE, but normally, we thought it was a star. William Herschel thought it was a comet in 1781, but other astronomers thought it was probably a planet based on its movement, which was accepted by 1783."
+        "The collisions were so powerful and strong that they sent shockwaves through the Moon’s surface. These waves created craters with ripples like in water! Uranus had been observed since at least 128 BCE, but we thought it was a star. William Herschel thought it was a comet in 1781, but other astronomers thought it was probably a planet based on its movement, and that was accepted by 1783. "
       ],
-      "location_hint":"Look for the huge moon, overseeing the place you can make a crater for yourself. Get a friend to try it, while you're there!"
+      "location_hint":"Look for the huge moon, overseeing the place you can create a crater. Get a friend to try it, while you're there!"
     },
     {
-      "question": "NASA's Curiosity Rover on Mars had to find the sun when it landed to communicate with Earth. Which direction is the picture it took, which you can find in the gallery, facing?",
+      "question": "Mars used to have rivers, just like there are on Earth, and they eroded the Martian landscape. What are the bends that form in rivers over time called?",
       "celestial_body": "Mars",
-      "location": "South-east Corner of Gallery",
+      "location": "East side of gallery near Dropped in Place",
       "answers": [
-        "Toward the sun",
-        "Away from the sun",
-        "North",
-        "South"
+        "Windings",
+        "Meanders",
+        "Crevasses",
+        "Rills"
       ],
       "correct_index": 1,
       "responses": [
         "This is false",
-        "You can tell it’s facing away from the sun because Curiosity’s self-portrait is of its shadow!",
+        "Now that the rivers on Mars are dry, can you imagine what it would be like to stand on one of the riverbeds? Can you make a version of that in the erosion table near the stream with a friend?",
         "This is false",
         "This is false"
-      ]
+      ],
+      "location_hint":"Between the windows, wind, and the stream, look for information about how water shapes the land."
     },
     {
       "question": "The Great Red Spot on Jupiter is a storm that has been raging for 80 years. What types of clouds create thunderstorms in Earth's atmosphere?",
@@ -126,9 +128,10 @@
       "responses": [
         "This is false",
         "This is false",
-        "Since cumulonimbus clouds are so dense and tall water vapour is formed inside them and lightning can also form.",
+        "Since cumulonimbus clouds are so dense and tall water vapour is formed inside them and lightning can also form. Jupiter is quite birght in the sky, so many ancient cultures associated it with gods. In the 1660's, astronomers first saw the Great Red Spot, which sometimes fades and then becomes visible again. Hop into the thunderstorm booth, and get a friend to imagine what that storm might sound like!",
         "This is false"
-      ]
+      ],
+      "location_hint":" Look where you can make a racket to recreate a thunderstorm."
     },
     {
       "question": "Saturn's magnetosphere is the second-strongest in the solar system, and creates visible aurorae of light around Saturn's poles. What types of earth rock are magnetic and might interact with Saturn's magnetic field if you brought them there?",
@@ -143,10 +146,11 @@
       "correct_index": 1,
       "responses": [
         "This is false",
-        "Magnetite is the mineral found in rocks that makes them magnetic and it is commonly found in igneous and metamorphic rocks.",
+        "Magnetite is the mineral found in rocks that makes them magnetic and it is commonly found in igneous and metamorphic rocks. Galileo was the first to observe Saturn's rings, which are mostly made up of water ice. Saturn's moon Enceladus has geysers which contribute to the ice in Saturn's rings -- can you imagine if our moon shot out particles of ice that then orbited around the earth?",
         "This is false",
         "This is false"
-      ]
+      ],
+      "location_hint":"Look between birds-eye videos and where you can smell memories."
     },
     {
       "question": "Neptune is called an \"ice giant\" because it has mantles of water, ammonia and methane in a dense fluid instead of gas - even though that wouldn't seem much like ice to us! Here in Calgary, we used to be covered in a glacier, and then a lake -- what was the depth of the \"icy ocean\" over us?",
@@ -164,7 +168,8 @@
         "This is false",
         "This is false",
         "It’s amazing to think that where we are now used to be giant glaciers and ice more than half a kilometer deep! What kind of world do you think that would look like?"
-      ]
+      ],
+      "location_hint":"Look for the place you can use a magnet to see beneath the ground - and then turn around."
     }
   ]
 }
