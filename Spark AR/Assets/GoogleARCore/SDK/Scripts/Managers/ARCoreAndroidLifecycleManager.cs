@@ -140,7 +140,7 @@ namespace GoogleARCoreInternal
 
         public void ResetSession()
         {
-            OnSessionSetEnabled(false);
+            OnSessionSetEnabled?.Invoke(false);
             _Initialize();
             ExternApi.ArPresto_reset();
         }

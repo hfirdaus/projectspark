@@ -18,33 +18,21 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace GoogleARCore.Examples.AugmentedImage
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using GoogleARCore;
+using GoogleARCoreInternal;
+using UnityEngine;
+
+/// <summary>
+/// Uses 4 frame corner objects to visualize an AugmentedImage.
+/// </summary>
+public class AugmentedImageVisualizer : MonoBehaviour
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Runtime.InteropServices;
-    using GoogleARCore;
-    using GoogleARCoreInternal;
-    using UnityEngine;
+	/// <summary>
+	/// The AugmentedImage to visualize.
+	/// </summary>
+	public AugmentedImage Image;
 
-    /// <summary>
-    /// Uses 4 frame corner objects to visualize an AugmentedImage.
-    /// </summary>
-    public class AugmentedImageVisualizer : MonoBehaviour
-    {
-        /// <summary>
-        /// The AugmentedImage to visualize.
-        /// </summary>
-        public AugmentedImage Image;
-
-        public void Start()
-        {
-            
-        }
-
-        /// <summary>
-        /// The Unity Update method.
-        /// </summary>
-
-    }
 }
