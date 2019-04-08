@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1657466862616337885}
+  - {fileID: 3298600120651770203}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -199,11 +199,16 @@ PrefabInstance:
       propertyPath: m_Text
       value: URANUS
       objectReference: {fileID: 0}
+    - target: {fileID: 8532871761568334226, guid: a24247424231e8e44870214676a83b0d,
+        type: 3}
+      propertyPath: m_Text
+      value: Uranus
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24247424231e8e44870214676a83b0d, type: 3}
---- !u!4 &1657466862616337885 stripped
+--- !u!4 &3298600120651770203 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2315045249747174531, guid: a24247424231e8e44870214676a83b0d,
+  m_CorrespondingSourceObject: {fileID: 1938460315097952261, guid: a24247424231e8e44870214676a83b0d,
     type: 3}
   m_PrefabInstance: {fileID: 3972227887932152158}
   m_PrefabAsset: {fileID: 0}
