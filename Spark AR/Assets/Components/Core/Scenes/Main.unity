@@ -1429,6 +1429,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c8931724830394cb72f701f5597f65, type: 3}
+--- !u!21 &1446360829
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/Procedural UI Image
+  m_Shader: {fileID: 4800000, guid: 27d83044d20c5de4e9d57d35e4fda368, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1571888378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,13 +1494,13 @@ MonoBehaviour:
   FitToScanOverlay: {fileID: 2009875769}
   trackerManager: {fileID: 2097652575}
   prefabs:
-  - {fileID: 5223737156932672401, guid: 3fb7b48c335064e479ed97e8be1ff69f, type: 3}
+  - {fileID: 173, guid: c2d76ad8b54d92440b1e1e661b1b0a5a, type: 3}
   - {fileID: 3403475800568648514, guid: a5888175b8e4264439528f91111827a9, type: 3}
   - {fileID: 704599450345315120, guid: 963fa59bdbdb45843b9d81e0a9ca4e9e, type: 3}
   - {fileID: 8463623055888811029, guid: d1664a310e5cec047bdec5028a17cba4, type: 3}
   - {fileID: 5031702675776372359, guid: e62b71e90b68c5b408cd5979d8013e9e, type: 3}
   - {fileID: 758092012077171132, guid: deb07db74df04654981a0c3a372ed790, type: 3}
-  - {fileID: 6879601415409147820, guid: e9dae03b420b1554da40feb237ef75f0, type: 3}
+  - {fileID: 300, guid: e9dae03b420b1554da40feb237ef75f0, type: 3}
   - {fileID: 559674384062081770, guid: a28802457027a7a4991dc0321885ebd3, type: 3}
   - {fileID: 3363247975850147217, guid: fd935416bb06dfd4d84be86fdc395a19, type: 3}
 --- !u!4 &1571888380
@@ -1627,14 +1660,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
+    - target: {fileID: 2924148034681061130, guid: 3fb7b48c335064e479ed97e8be1ff69f,
         type: 3}
-      propertyPath: m_Name
-      value: SolarSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
-        type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4805996852614672668, guid: 3fb7b48c335064e479ed97e8be1ff69f,
@@ -1716,6 +1744,16 @@ PrefabInstance:
         type: 3}
       propertyPath: RadiusScale
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
+        type: 3}
+      propertyPath: m_Name
+      value: SolarSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6212934424971790718, guid: 3fb7b48c335064e479ed97e8be1ff69f,
         type: 3}
