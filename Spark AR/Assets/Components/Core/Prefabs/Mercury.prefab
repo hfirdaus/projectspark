@@ -113,7 +113,6 @@ MonoBehaviour:
   orbit_incl: 7
   rotation_per: -1407
   offset: 0
-  name: 
   isGhost: 0
 --- !u!114 &5031702675776372359
 MonoBehaviour:
@@ -197,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 7903100785766370079, guid: a24247424231e8e44870214676a83b0d,
         type: 3}
       propertyPath: m_Text
-      value: sMERCUR
+      value: MERCURY
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24247424231e8e44870214676a83b0d, type: 3}
