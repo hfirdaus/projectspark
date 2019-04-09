@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 
 public class SolarSystem : Singleton<SolarSystem>
@@ -38,16 +39,30 @@ public class SolarSystem : Singleton<SolarSystem>
 		// Make sure everything is invisible!!!
 		TheSun = transform.GetChild(0).gameObject;
 		Planets = gameObject.GetComponentsInChildren<SolarSystemPlanet>().ToList();
-		orbits = new List<OrbitVisualizer>();
-		Init(transform.position, transform.up);
-	}
+        orbits = new List<OrbitVisualizer>();
+        Init(transform.position, transform.up);
+    }
+
+    public void UpdateRendered(SolarSystemPlanet p)
+    {
+        if (Enum.TryParse(p.gameObject.name, out PlanetName planet))
+        {
+            p.SetCollected(SolarSystemPlanetManager.RenderedPlanets[planet]);
+        }
+        else
+        {
+            Debug.Log("Planet " + p.gameObject.name + "not updated for rendering.");
+        }
+    }
+
 
 	void Update()
 	{
 		Planets.ForEach(p => UpdatePlanetRotation(p));
-	}
+        Planets.ForEach(p => UpdateRendered(p));
+    }
 
-	public void SetVisibility(bool visible)
+    public void SetVisibility(bool visible)
 	{
 		if (Visible == visible)
 			return;
@@ -90,7 +105,7 @@ public class SolarSystem : Singleton<SolarSystem>
 			}
 
 			planet.transform.localScale = Vector3.one * (1f / Mathf.Log10(sun_diameter / planet.diameter)) * RadiusScale;
-			float rand = Random.value * 359f;
+			float rand = UnityEngine.Random.value * 359f;
 			planet.transform.RotateAround(transform.position, Vector3.up, rand);
 			planet.transform.Rotate(planet.transform.up, -rand);
 

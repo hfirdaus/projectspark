@@ -1427,9 +1427,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3069532817344434654, guid: 30c8931724830394cb72f701f5597f65,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00012207031
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c8931724830394cb72f701f5597f65, type: 3}
---- !u!21 &1446360829
+--- !u!21 &1446559616
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1660,6 +1665,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
+        type: 3}
+      propertyPath: m_Name
+      value: SolarSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2924148034681061130, guid: 3fb7b48c335064e479ed97e8be1ff69f,
         type: 3}
       propertyPath: m_Enabled
@@ -1744,16 +1759,6 @@ PrefabInstance:
         type: 3}
       propertyPath: RadiusScale
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
-        type: 3}
-      propertyPath: m_Name
-      value: SolarSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 4805996852614672671, guid: 3fb7b48c335064e479ed97e8be1ff69f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6212934424971790718, guid: 3fb7b48c335064e479ed97e8be1ff69f,
         type: 3}
