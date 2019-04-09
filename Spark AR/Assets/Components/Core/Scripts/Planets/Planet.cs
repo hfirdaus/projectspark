@@ -48,7 +48,7 @@ public class Planet : MonoBehaviour
 	{
         isGhost = isAGhost;
 
-		Renderer.material = isGhost ? collectedMaterial : ghostMaterial;
+		Renderer.material = isGhost ? ghostMaterial : collectedMaterial;
 	}
     
 	public void SetAlpha(float alpha)
