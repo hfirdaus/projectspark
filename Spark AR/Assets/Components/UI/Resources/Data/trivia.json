@@ -17,7 +17,7 @@
         "This is false",
         "This is false"
       ],
-      "location_hint":"Look near where a nebula is hiding in a corner."
+      "location_hint":"Look past the stream near where pictures of a nebula hide in a corner."
     },
     {
       "question": "What type of rock formation might Venus's dense atmosphere might be hiding?",
@@ -36,7 +36,7 @@
         "This is false",
         "Venus has the most volcanoes of any planet in our solar system! Under any part of the atmosphere anywhere on Venus volcanoes can be found. Because Venus is so bright in the sky, humans have known about it for as long as we've kept records, and it has been sacred in many cultures. You can go to the south side of the gallery near the windows, and make up a star-picture (asterism) about what you would have thought Venus was if you were an ancient human."
       ],
-      "location_hint":"Beside the stream, a gallery of satellite images overlooks westward-facing planetary information."
+      "location_hint":"Beside the stream, a gallery of satellite images overlooks planetary information that faces back to the images."
     },
     {
       "question": "But why is the sky blue?",
@@ -131,7 +131,7 @@
         "This is false",
         "This is false"
       ],
-      "location_hint":"Look between birds-eye videos and where you can smell memories."
+      "location_hint":"Look for a way to see with magnets between birds-eye videos and where you can smell memories."
     },
     {
       "question": "Neptune is called an \"ice giant\" because it has mantles of water, ammonia and methane in a dense fluid instead of gas - even though that wouldn't seem much like ice to us! Here in Calgary, we used to be covered in a glacier, and then a lake -- what was the depth of the \"icy ocean\" over us?",
@@ -150,7 +150,8 @@
         "It’s amazing to think that where we are now used to be giant glaciers and ice more than half a kilometer deep! What kind of world do you think that would look like?",
         "This is false"
       ],
-      "location_hint":"Look for the place you can use a magnet to see beneath the ground - and then turn around."
+      "location_hint":"Between the place you can smell memories, and the headwaters of Earth and Sky, find information about how ice shapes Calgary.
+"
     }
   ]
 }
