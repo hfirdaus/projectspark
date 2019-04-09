@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
-	void Awake()
+
+    public event Action<PlanetName> OnPlanetCollected = new Action<PlanetName>(p => { });
+
+    void Awake()
 	{
 		Application.targetFrameRate = 60;
 
@@ -27,9 +31,12 @@ public class UIManager : Singleton<UIManager>
 	void OnCorrectAnswerSelected(PlanetName planet)
 	{
 		PlanetTray.Instance.PlanetCollected(planet);
-	}
+        OnPlanetCollected?.Invoke(planet);
+        Debug.Log("A planet has been collected and event invoked");
 
-	void UIPlanetIcon_OnClick(PlanetName planet)
+    }
+
+    void UIPlanetIcon_OnClick(PlanetName planet)
 	{
 		bool collected = PlanetTray.Instance[planet].Collected;
 		string location = "Location:\n\n" + TriviaManager.Instance[planet].location_hint;

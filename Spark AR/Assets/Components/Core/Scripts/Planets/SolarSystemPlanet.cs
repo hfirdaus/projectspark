@@ -5,11 +5,15 @@ using System.Text;
 
 public class SolarSystemPlanet : Planet
 {
-    public bool isCollected = false;
+    private bool isCollected = true;
 
     public void SetCollected(bool collected)
     {
-        isCollected = collected;
-        SetGhost(!collected);
+        if (isCollected != collected)
+        {
+            isCollected = collected;
+            SetGhost(!collected);
+        }
     }
+
 }

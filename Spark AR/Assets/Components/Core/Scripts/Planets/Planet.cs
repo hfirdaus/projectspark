@@ -42,13 +42,17 @@ public class Planet : MonoBehaviour
 	void Awake()
 	{
 		collectedMaterial = Renderer.material;
+        if (collectedMaterial.mainTexture == null)
+        {
+            Debug.Log("Main texture of collected material is null");
+        }
 	}
 
 	public void SetGhost(bool isAGhost)
 	{
         isGhost = isAGhost;
-
-		Renderer.material = isGhost ? ghostMaterial : collectedMaterial;
+        
+        Renderer.material = isGhost ? ghostMaterial : collectedMaterial;
 	}
     
 	public void SetAlpha(float alpha)

@@ -229,7 +229,6 @@ MonoBehaviour:
   rotation_per: -24.6
   offset: -0.75
   isGhost: 0
-  isCollected: 0
 --- !u!1 &41
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +356,6 @@ MonoBehaviour:
   rotation_per: -23.9
   offset: 0
   isGhost: 0
-  isCollected: 0
 --- !u!1 &42
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +481,6 @@ MonoBehaviour:
   rotation_per: 17.2
   offset: -2.25
   isGhost: 0
-  isCollected: 0
 --- !u!1 &43
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +710,6 @@ MonoBehaviour:
   rotation_per: -9.9
   offset: -1
   isGhost: 0
-  isCollected: 0
 --- !u!1 &45
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +835,6 @@ MonoBehaviour:
   rotation_per: 5832.5
   offset: 0.6
   isGhost: 0
-  isCollected: 0
 --- !u!1 &46
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +962,6 @@ MonoBehaviour:
   rotation_per: -10.7
   offset: -1.75
   isGhost: 0
-  isCollected: 0
 --- !u!114 &174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,7 +1103,6 @@ MonoBehaviour:
   rotation_per: -16.1
   offset: -3.25
   isGhost: 0
-  isCollected: 0
 --- !u!1 &48
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1326,6 @@ MonoBehaviour:
   rotation_per: -1407
   offset: 0.8
   isGhost: 0
-  isCollected: 0
 --- !u!1 &50
 GameObject:
   m_ObjectHideFlags: 0
