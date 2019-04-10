@@ -16,11 +16,9 @@ public class SolarSystemPlanetManager : MonoBehaviour
         { PlanetName.Neptune, false }
     };
     
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         UIManager.Instance.OnPlanetCollected += AddToSolarSystem;
-
     }
 
     public void AddToSolarSystem(PlanetName planet)
