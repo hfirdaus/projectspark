@@ -49,12 +49,7 @@ public class SolarSystem : Singleton<SolarSystem>
         {
             p.SetCollected(SolarSystemPlanetManager.RenderedPlanets[planet]);
         }
-        else
-        {
-            Debug.Log("Planet " + p.gameObject.name + "not updated for rendering.");
-        }
     }
-
 
 	void Update()
 	{
@@ -71,8 +66,7 @@ public class SolarSystem : Singleton<SolarSystem>
 
 		Planets.ForEach(p => p.SetAlpha(visible ? 1f : 0f));
 
-		// DO NOT FUCKING LEAVE THIS IN THE FINAL PROJECT
-		// TODO: GO FUCK YOURSELF
+		// DO NOT LEAVE THIS IN THE FINAL PROJECT
 		TheSun.GetComponent<Renderer>().material.color = TheSun.GetComponent<Renderer>().material.color.WithAlpha(visible ? 1f : 0f);
 	}
 

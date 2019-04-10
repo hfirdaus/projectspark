@@ -280,6 +280,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1baa931ec40b9c43ae6b26125976d23, type: 3}
+--- !u!1 &364923495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364923497}
+  - component: {fileID: 364923496}
+  m_Layer: 0
+  m_Name: PlanetManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &364923496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364923495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c63dec0006234489ef30b3367945b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &364923497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364923495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846889560
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,39 +515,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c10877f7cd5764de18d46d7b777d1faa, type: 3}
---- !u!21 &1331421368
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI/Procedural UI Image
-  m_Shader: {fileID: 4800000, guid: 27d83044d20c5de4e9d57d35e4fda368, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1335095368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1355,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 3069532817344434654, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00012207031
+      value: -0.00024414062
       objectReference: {fileID: 0}
     - target: {fileID: 3069532817344434654, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
@@ -1365,12 +1375,12 @@ PrefabInstance:
     - target: {fileID: 8181607993083024150, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.9999695
+      value: -14.999939
       objectReference: {fileID: 0}
     - target: {fileID: 8181607993849753624, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.9999695
+      value: -14.999939
       objectReference: {fileID: 0}
     - target: {fileID: 5904974790374368578, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
@@ -1385,22 +1395,22 @@ PrefabInstance:
     - target: {fileID: 8181607993008072827, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.9999695
+      value: -14.999939
       objectReference: {fileID: 0}
     - target: {fileID: 8181607993228892364, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.9999695
+      value: -14.999939
       objectReference: {fileID: 0}
     - target: {fileID: 8181607993473313341, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.9999695
+      value: -14.999939
       objectReference: {fileID: 0}
     - target: {fileID: 8181607994571963251, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.9999695
+      value: -14.999939
       objectReference: {fileID: 0}
     - target: {fileID: 8538777541891730346, guid: 30c8931724830394cb72f701f5597f65,
         type: 3}
@@ -1509,6 +1519,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c8931724830394cb72f701f5597f65, type: 3}
+--- !u!21 &1371013526
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/Procedural UI Image
+  m_Shader: {fileID: 4800000, guid: 27d83044d20c5de4e9d57d35e4fda368, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!21 &1509187067
 Material:
   serializedVersion: 6
