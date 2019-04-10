@@ -50,7 +50,7 @@ public class TriviaPanel : Singleton<TriviaPanel>
 		}
 		else
 		{
-			PopupPanel.Instance.Show("Whoops!", TriviaManager.Instance[currentPlanet].responses[answer] + "\n\nGood going, stupid.", Color.grey, null, true);
+			PopupPanel.Instance.Show("Whoops!", TriviaManager.Instance[currentPlanet].responses[answer], Color.grey, null, true);
 		}
 	}
 
