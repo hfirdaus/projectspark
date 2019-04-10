@@ -21,8 +21,6 @@ public class UIAnimatedPlanetIcon : MonoBehaviour
 	float imageSize = 150f;
 	float imageAnimSize = 120f;
 
-	public ParticleSystem effect;
-
 	void Awake()
 	{
 		group = GetComponent<CanvasGroup>();
@@ -46,7 +44,7 @@ public class UIAnimatedPlanetIcon : MonoBehaviour
 
 	public void DoAnimation()
 	{
-		var col = effect.colorOverLifetime;
+		var col = ParticleManager.Instance.CollectedEffect.colorOverLifetime;
 		col.enabled = true;
 
 		Color planetColor = PlanetInfo.Colors[currentPlanet];
@@ -59,7 +57,7 @@ public class UIAnimatedPlanetIcon : MonoBehaviour
 
 		col.color = grad;
 
-		LeanTween.delayedCall(0.55f, () => { effect.Play(); });
+		LeanTween.delayedCall(0.55f, () => { ParticleManager.Instance.CollectedEffect.Play(); });
 
 		PlanetImage.color = Color.white;
 		PlanetImage.sprite = outlineSprite;

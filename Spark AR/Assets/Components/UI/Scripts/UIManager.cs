@@ -6,9 +6,9 @@ using UnityEngine;
 public class UIManager : Singleton<UIManager>
 {
 
-    public event Action<PlanetName> OnPlanetCollected = new Action<PlanetName>(p => { });
+	public event Action<PlanetName> OnPlanetCollected = new Action<PlanetName>(p => { });
 
-    void Awake()
+	void Awake()
 	{
 		Application.targetFrameRate = 60;
 
@@ -17,6 +17,8 @@ public class UIManager : Singleton<UIManager>
 		TriviaPanel.Instance.OnCorrectAnswerSelected += OnCorrectAnswerSelected;
 
 		TrackerManager.Instance.OnPlanetTracked += PlanetScanned;
+
+		PlanetTray.Instance.OnCollectedAllPlanets += DoWin;
 
 		KeyboardTestManager.Instance.Numpad1 += () => { PlanetScanned((PlanetName)0); };
 		KeyboardTestManager.Instance.Numpad2 += () => { PlanetScanned((PlanetName)1); };
@@ -31,12 +33,18 @@ public class UIManager : Singleton<UIManager>
 	void OnCorrectAnswerSelected(PlanetName planet)
 	{
 		PlanetTray.Instance.PlanetCollected(planet);
-        OnPlanetCollected?.Invoke(planet);
-        Debug.Log("A planet has been collected and event invoked");
+		OnPlanetCollected?.Invoke(planet);
+	}
 
-    }
+	public void DoWin()
+	{
+		LeanTween.delayedCall(0.2f, () =>
+		{
+			PopupPanel.Instance.ShowWin("Wow!", "You collected all those planets!\n\nGood job!.");
+		});
+	}
 
-    void UIPlanetIcon_OnClick(PlanetName planet)
+	void UIPlanetIcon_OnClick(PlanetName planet)
 	{
 		bool collected = PlanetTray.Instance[planet].Collected;
 		string location = "Location:\n\n" + TriviaManager.Instance[planet].location_hint;

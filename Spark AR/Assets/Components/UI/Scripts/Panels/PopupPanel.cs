@@ -13,8 +13,9 @@ public class PopupPanel : PanelBase<PopupPanel>
 	Action Callback;
 
 	UIAnimatedPlanetIcon animIcon;
+	UIPlanetRing planetWinRing;
 
-	CanvasGroup wrongIcon;
+	CanvasGroup wrongGroup;
 
 	float timeGoal;
 
@@ -24,9 +25,9 @@ public class PopupPanel : PanelBase<PopupPanel>
 		Title = transform.Find("Holder/Title").GetComponent<Text>();
 		Message = transform.Find("Holder/Message").GetComponent<Text>();
 		Accent = transform.Find("Holder/Accent").GetComponent<Graphic>();
-		wrongIcon = transform.Find("Holder/WrongIcon").GetComponent<CanvasGroup>();
+		wrongGroup = transform.Find("Holder/WrongIcon").GetComponent<CanvasGroup>();
 		animIcon = GetComponentInChildren<UIAnimatedPlanetIcon>();
-
+		planetWinRing = GetComponentInChildren<UIPlanetRing>();
 	}
 
 	public void Show(string title, string message, Color color, Action callback = null, bool wrong = false)
@@ -37,9 +38,10 @@ public class PopupPanel : PanelBase<PopupPanel>
 		Callback = callback;
 		LayoutRebuilder.MarkLayoutForRebuild(rect);
 		UIBlurControl.Instance.SetBlurVisibility(true);
+		planetWinRing.SetVisibility(false);
 
 		animIcon.SetVisibility(false);
-		wrongIcon.alpha = wrong ? 1f : 0f;
+		wrongGroup.alpha = wrong ? 1f : 0f;
 
 		base.Show();
 	}
@@ -52,20 +54,37 @@ public class PopupPanel : PanelBase<PopupPanel>
 		Callback = callback;
 		LayoutRebuilder.MarkLayoutForRebuild(rect);
 		UIBlurControl.Instance.SetBlurVisibility(true);
-
+		planetWinRing.SetVisibility(false);
 
 		if (correct)
 		{
-			wrongIcon.alpha = 0f;
+			wrongGroup.alpha = 0f;
 
 			animIcon.SetVisibility(true);
 			animIcon.InitIcon(planet);
 		}
 		else
 		{
-			wrongIcon.alpha = 1f;
+			wrongGroup.alpha = 1f;
 			animIcon.SetVisibility(false);
 		}
+
+		base.Show();
+	}
+
+	public void ShowWin(string title, string message, Action callback = null)
+	{
+		Title.text = title;
+		Message.text = message;
+		Callback = callback;
+
+		wrongGroup.alpha = 0f;
+		animIcon.SetVisibility(false);
+		UIBlurControl.Instance.SetBlurVisibility(true);
+		Accent.color = Color.white;
+
+		planetWinRing.SetVisibility(true);
+		planetWinRing.DoAnimation();
 
 		base.Show();
 	}

@@ -44,13 +44,13 @@ public class TriviaPanel : Singleton<TriviaPanel>
 		{
 			PopupPanel.Instance.Show("Correct!", currentTrivia.responses[answer], PlanetInfo.Colors[currentPlanet], currentPlanet, () =>
 			{
-				OnCorrectAnswerSelected?.Invoke(currentPlanet);
 				Hide();
+				OnCorrectAnswerSelected?.Invoke(currentPlanet);
 			}, true);
 		}
 		else
 		{
-			PopupPanel.Instance.Show("Whoops!", TriviaManager.Instance[currentPlanet].responses[answer] + "\n\nGood going, stupid.", Color.grey, null, true);
+			PopupPanel.Instance.Show("Whoops!", TriviaManager.Instance[currentPlanet].responses[answer] + "\n\nTry again...", Color.grey, null, true);
 		}
 	}
 
