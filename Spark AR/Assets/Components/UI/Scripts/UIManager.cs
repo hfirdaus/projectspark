@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -11,6 +12,7 @@ public class UIManager : Singleton<UIManager>
 	void Awake()
 	{
 		Application.targetFrameRate = 60;
+		Permission.RequestUserPermission(Permission.Camera);
 
 		UIPlanetIcon.OnClick += UIPlanetIcon_OnClick;
 
@@ -40,7 +42,7 @@ public class UIManager : Singleton<UIManager>
 	{
 		LeanTween.delayedCall(0.2f, () =>
 		{
-			PopupPanel.Instance.ShowWin("Wow!", "You collected all those planets!\n\nGood job!.");
+			PopupPanel.Instance.ShowWin("Wow!", "You collected all 8 planets, good job!\n\nHead back to the solar system marker to see them all together.");
 		});
 	}
 
@@ -57,7 +59,7 @@ public class UIManager : Singleton<UIManager>
 		if (!PlanetTray.Instance[planet].Collected)
 			TriviaPanel.Instance.Show(planet);
 
-		else
-			PopupPanel.Instance.Show(planet.ToString(), "You've already collected this planet!\nWow!", PlanetInfo.Colors[planet]);
+		//else
+		//	PopupPanel.Instance.Show(planet.ToString(), "You've already collected this planet!\nWow!", PlanetInfo.Colors[planet]);
 	}
 }
